@@ -1,0 +1,485 @@
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/muFx2RTTHs2
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import Link from "next/link"
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table"
+
+export default function Component() {
+  return (
+    <div className="flex min-h-screen">
+      <div className="bg-gray-100 dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 w-64 p-6">
+        <div className="flex items-center gap-2 mb-8">
+          <Avatar className="w-8 h-8 border">
+            <img src="/placeholder.svg" alt="Admin" />
+            <AvatarFallback>A</AvatarFallback>
+          </Avatar>
+          <div className="grid gap-0.5">
+            <h1 className="text-xl font-bold">Admin #123</h1>
+            <div className="text-sm text-gray-500 dark:text-gray-400">Museum Admin</div>
+          </div>
+        </div>
+        <nav className="space-y-2">
+          <Link
+            href="#"
+            className="flex items-center gap-2 px-4 py-2 rounded-md bg-gray-200 dark:bg-gray-800 transition-colors"
+            prefetch={false}
+          >
+            <LayoutDashboardIcon className="w-5 h-5" />
+            Anthropology
+          </Link>
+          <Link
+            href="#"
+            className="flex items-center gap-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+            prefetch={false}
+          >
+            <WorkflowIcon className="w-5 h-5" />
+            Fine Arts
+          </Link>
+          <Link
+            href="#"
+            className="flex items-center gap-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+            prefetch={false}
+          >
+            <ViewIcon className="w-5 h-5" />
+            Notifications
+          </Link>
+          <Link
+            href="#"
+            className="flex items-center gap-2 px-4 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+            prefetch={false}
+          >
+            <UserIcon className="w-5 h-5" />
+            Sign Out
+          </Link>
+        </nav>
+      </div>
+      <div className="flex-1 p-8">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-4">
+            <h2 className="text-2xl font-bold">Anthropology Museum</h2>
+            <Select defaultValue="1">
+              <SelectTrigger className="w-24">
+                <SelectValue placeholder="Gallery" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="1">Gallery 1 (Floor 1)</SelectItem>
+                <SelectItem value="2">Gallery 2 (Floor 2)</SelectItem>
+                <SelectItem value="3">Gallery 3 (Floor 3)</SelectItem>
+                <SelectItem value="4">Gallery 4 (Floor 4)</SelectItem>
+                <SelectItem value="5">Gallery 5 (Floor 5)</SelectItem>
+                <SelectItem value="6">Gallery 6 (Floor 1)</SelectItem>
+                <SelectItem value="7">Gallery 7 (Floor 2)</SelectItem>
+                <SelectItem value="8">Gallery 8 (Floor 3)</SelectItem>
+                <SelectItem value="9">Gallery 9 (Floor 4)</SelectItem>
+                <SelectItem value="10">Gallery 10 (Floor 5)</SelectItem>
+                <SelectItem value="11">Gallery 11 (Floor 1)</SelectItem>
+                <SelectItem value="12">Gallery 12 (Floor 2)</SelectItem>
+                <SelectItem value="13">Gallery 13 (Floor 3)</SelectItem>
+                <SelectItem value="14">Gallery 14 (Floor 4)</SelectItem>
+                <SelectItem value="15">Gallery 15 (Floor 5)</SelectItem>
+                <SelectItem value="16">Gallery 16 (Floor 1)</SelectItem>
+                <SelectItem value="17">Gallery 17 (Floor 2)</SelectItem>
+                <SelectItem value="18">Gallery 18 (Floor 3)</SelectItem>
+                <SelectItem value="19">Gallery 19 (Floor 4)</SelectItem>
+                <SelectItem value="20">Gallery 20 (Floor 5)</SelectItem>
+                <SelectItem value="21">Gallery 21 (Floor 1)</SelectItem>
+                <SelectItem value="22">Gallery 22 (Floor 2)</SelectItem>
+                <SelectItem value="23">Gallery 23 (Floor 3)</SelectItem>
+                <SelectItem value="24">Gallery 24 (Floor 4)</SelectItem>
+                <SelectItem value="25">Gallery 25 (Floor 5)</SelectItem>
+                <SelectItem value="26">Gallery 26 (Floor 1)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex items-center gap-4">
+            <Input
+              type="search"
+              placeholder="Search..."
+              className="bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-md px-4 py-2 w-64"
+            />
+            <Button>
+              <PlusIcon className="w-5 h-5 mr-2" />
+              Add New
+            </Button>
+            <Button variant="outline">
+              <SmartphoneIcon className="w-5 h-5 mr-2" />
+              Send to Mobile App
+            </Button>
+          </div>
+        </div>
+        <div className="bg-white dark:bg-gray-800 rounded-md shadow-md overflow-hidden">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                    <span>Title</span>
+                    <ArrowUpIcon className="w-4 h-4 text-gray-400" />
+                  </div>
+                </TableHead>
+                <TableHead>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                    <span>Artist</span>
+                    <ArrowUpIcon className="w-4 h-4 text-gray-400" />
+                  </div>
+                </TableHead>
+                <TableHead>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                    <span>Date</span>
+                    <ArrowUpIcon className="w-4 h-4 text-gray-400" />
+                  </div>
+                </TableHead>
+                <TableHead>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                    <span>Type</span>
+                    <ArrowUpIcon className="w-4 h-4 text-gray-400" />
+                  </div>
+                </TableHead>
+                <TableHead>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                    <span>Floor #</span>
+                    <ArrowUpIcon className="w-4 h-4 text-gray-400" />
+                  </div>
+                </TableHead>
+                <TableHead>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                    <span>Gallery</span>
+                    <ArrowUpIcon className="w-4 h-4 text-gray-400" />
+                  </div>
+                </TableHead>
+                <TableHead>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                    <span>Actions</span>
+                  </div>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell>Neolithic Axe</TableCell>
+                <TableCell>Unknown</TableCell>
+                <TableCell>3000 BC</TableCell>
+                <TableCell>Artifact</TableCell>
+                <TableCell>1</TableCell>
+                <TableCell>Prehistoric Exhibit</TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Button variant="outline" size="sm">
+                      <FilePenIcon className="w-4 h-4" />
+                      Edit
+                    </Button>
+                    <Button variant="destructive" size="sm">
+                      <TrashIcon className="w-4 h-4" />
+                      Delete
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      <SmartphoneIcon className="w-4 h-4" />
+                      Send to Mobile
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Mayan Jade Mask</TableCell>
+                <TableCell>Unknown</TableCell>
+                <TableCell>700 AD</TableCell>
+                <TableCell>Artifact</TableCell>
+                <TableCell>2</TableCell>
+                <TableCell>Ancient Civilizations</TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Button variant="outline" size="sm">
+                      <FilePenIcon className="w-4 h-4" />
+                      Edit
+                    </Button>
+                    <Button variant="destructive" size="sm">
+                      <TrashIcon className="w-4 h-4" />
+                      Delete
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      <SmartphoneIcon className="w-4 h-4" />
+                      Send to Mobile
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Egyptian Sarcophagus</TableCell>
+                <TableCell>Unknown</TableCell>
+                <TableCell>1500 BC</TableCell>
+                <TableCell>Artifact</TableCell>
+                <TableCell>3</TableCell>
+                <TableCell>Egyptian Exhibit</TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Button variant="outline" size="sm">
+                      <FilePenIcon className="w-4 h-4" />
+                      Edit
+                    </Button>
+                    <Button variant="destructive" size="sm">
+                      <TrashIcon className="w-4 h-4" />
+                      Delete
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      <SmartphoneIcon className="w-4 h-4" />
+                      Send to Mobile
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Inuit Kayak</TableCell>
+                <TableCell>Unknown</TableCell>
+                <TableCell>1800 AD</TableCell>
+                <TableCell>Exhibit</TableCell>
+                <TableCell>4</TableCell>
+                <TableCell>Indigenous Cultures</TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Button variant="outline" size="sm">
+                      <FilePenIcon className="w-4 h-4" />
+                      Edit
+                    </Button>
+                    <Button variant="destructive" size="sm">
+                      <TrashIcon className="w-4 h-4" />
+                      Delete
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      <SmartphoneIcon className="w-4 h-4" />
+                      Send to Mobile
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Maori Weavings</TableCell>
+                <TableCell>Unknown</TableCell>
+                <TableCell>1900 AD</TableCell>
+                <TableCell>Collection</TableCell>
+                <TableCell>5</TableCell>
+                <TableCell>Indigenous Cultures</TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Button variant="outline" size="sm">
+                      <FilePenIcon className="w-4 h-4" />
+                      Edit
+                    </Button>
+                    <Button variant="destructive" size="sm">
+                      <TrashIcon className="w-4 h-4" />
+                      Delete
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      <SmartphoneIcon className="w-4 h-4" />
+                      Send to Mobile
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ArrowUpIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m5 12 7-7 7 7" />
+      <path d="M12 19V5" />
+    </svg>
+  )
+}
+
+
+function FilePenIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v10" />
+      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+      <path d="M10.4 12.6a2 2 0 1 1 3 3L8 21l-4 1 1-4Z" />
+    </svg>
+  )
+}
+
+
+function LayoutDashboardIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="7" height="9" x="3" y="3" rx="1" />
+      <rect width="7" height="5" x="14" y="3" rx="1" />
+      <rect width="7" height="9" x="14" y="12" rx="1" />
+      <rect width="7" height="5" x="3" y="16" rx="1" />
+    </svg>
+  )
+}
+
+
+function PlusIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 12h14" />
+      <path d="M12 5v14" />
+    </svg>
+  )
+}
+
+
+function SmartphoneIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+      <path d="M12 18h.01" />
+    </svg>
+  )
+}
+
+
+function TrashIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 6h18" />
+      <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+      <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+    </svg>
+  )
+}
+
+
+function UserIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
+  )
+}
+
+
+function ViewIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 12s2.545-5 7-5c4.454 0 7 5 7 5s-2.546 5-7 5c-4.455 0-7-5-7-5z" />
+      <path d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+      <path d="M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2" />
+      <path d="M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2" />
+    </svg>
+  )
+}
+
+
+function WorkflowIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="8" height="8" x="3" y="3" rx="2" />
+      <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+      <rect width="8" height="8" x="13" y="13" rx="2" />
+    </svg>
+  )
+}
